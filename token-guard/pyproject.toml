@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "token-guard"
+version = "0.1.0"
+description = "Local-first AI token waste monitoring and guardrails"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Token Guard contributors"}]
+classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License"]
+
+[project.scripts]
+token-guard = "token_guard.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["token_guard*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
